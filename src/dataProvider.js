@@ -8,7 +8,9 @@ import { handleAxiosRequestError } from './utils';
 
 const httpClient = fetchUtils.fetchJson;
 
-let apiUrl = 'http://localhost:5001';
+let apiUrl = 'https://staging.api.lensesplanet.com';
+
+// 'http://localhost:5001';
 
 //getApiBaseUrl()
 
