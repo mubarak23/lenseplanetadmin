@@ -10,7 +10,7 @@ const httpClient = fetchUtils.fetchJson;
 
 let apiUrl = 'https://staging.api.lensesplanet.com';
 
-// 'http://localhost:5001';
+// let apiUrl = 'http://localhost:5001';
 
 //getApiBaseUrl()
 
@@ -27,8 +27,8 @@ export default {
     const { page, perPage } = params.pagination;
     // const { field, order } = params.sort;
     const query = {
-      page: page,
       limit: 40,
+      page: page,
       // range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
     };
     if (params.filter && Object.keys(params.filter).length) {

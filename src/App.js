@@ -16,6 +16,8 @@ import Dashboard from './Dashboard';
 import dataProvider from './dataProvider';
 
 import { CreateOrder } from './createOrder';
+import { LensAdditionList } from './lensaddition';
+import { LensAxisesList } from './lensaxies';
 import { OrdersList } from './orders';
 
 const UserSearchFilter = (props) => (
@@ -48,6 +50,8 @@ const App = () => (
   >
     <Resource name='users' list={UserList} create={userCreate} />
     <Resource name='orders' list={OrdersList} create={CreateOrder} />
+    <Resource name='lenseadditions' list={LensAdditionList} />
+    <Resource name='lensaxise' list={LensAxisesList} />
   </Admin>
 );
 
