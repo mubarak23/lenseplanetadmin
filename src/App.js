@@ -18,8 +18,9 @@ import dataProvider from './dataProvider';
 import { CreateOrder } from './createOrder';
 import { LensAdditionList } from './lensaddition';
 import { LensAxisesList } from './lensaxies';
+import { LensSphereLists } from './lenssphere';
+import { LensTypeLists } from './lenstype';
 import { OrdersList } from './orders';
-
 const UserSearchFilter = (props) => (
   <Filter {...props}>
     <TextInput label='Search with User Id' source='userId' alwaysOn />
@@ -52,6 +53,8 @@ const App = () => (
     <Resource name='orders' list={OrdersList} create={CreateOrder} />
     <Resource name='lenseadditions' list={LensAdditionList} />
     <Resource name='lensaxise' list={LensAxisesList} />
+    <Resource name='lenstype' list={LensTypeLists} />
+    <Resource name='lenssphere' list={LensSphereLists} />
   </Admin>
 );
 
