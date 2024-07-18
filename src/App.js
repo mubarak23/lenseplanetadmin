@@ -18,6 +18,7 @@ import dataProvider from './dataProvider';
 import { CreateOrder } from './createOrder';
 import { LensAdditionList } from './lensaddition';
 import { LensAxisesList } from './lensaxies';
+import { LensCoatingLists } from './lenscoating';
 import { LensCylinderLists } from './lenscylinder';
 import { LensSphereLists } from './lenssphere';
 import { LensThicknessLists } from './lensthickness';
@@ -59,6 +60,7 @@ const App = () => (
     <Resource name='lens Sphere' list={LensSphereLists} />
     <Resource name='lens cylinder' list={LensCylinderLists} />
     <Resource name='lens Thickness' list={LensThicknessLists} />
+    <Resource name='lens coating' list={LensCoatingLists} />
   </Admin>
 );
 
