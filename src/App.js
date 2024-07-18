@@ -18,7 +18,9 @@ import dataProvider from './dataProvider';
 import { CreateOrder } from './createOrder';
 import { LensAdditionList } from './lensaddition';
 import { LensAxisesList } from './lensaxies';
+import { LensCylinderLists } from './lenscylinder';
 import { LensSphereLists } from './lenssphere';
+import { LensThicknessLists } from './lensthickness';
 import { LensTypeLists } from './lenstype';
 import { OrdersList } from './orders';
 const UserSearchFilter = (props) => (
@@ -51,10 +53,12 @@ const App = () => (
   >
     <Resource name='users' list={UserList} create={userCreate} />
     <Resource name='orders' list={OrdersList} create={CreateOrder} />
-    <Resource name='lenseadditions' list={LensAdditionList} />
-    <Resource name='lensaxise' list={LensAxisesList} />
-    <Resource name='lenstype' list={LensTypeLists} />
-    <Resource name='lenssphere' list={LensSphereLists} />
+    <Resource name='lense Additions' list={LensAdditionList} />
+    <Resource name='lens Axise' list={LensAxisesList} />
+    <Resource name='lens Type' list={LensTypeLists} />
+    <Resource name='lens Sphere' list={LensSphereLists} />
+    <Resource name='lens cylinder' list={LensCylinderLists} />
+    <Resource name='lens Thickness' list={LensThicknessLists} />
   </Admin>
 );
 
