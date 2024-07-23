@@ -3,7 +3,11 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
 
-let apiBaseUrl = 'https://staging.api.lensesplanet.com';
+// let apiBaseUrl = 'http://localhost:5001';
+
+let apiUrl = 'https://lens-plannet-17cc7458993a.herokuapp.com';
+
+// 'https://staging.api.lensesplanet.com';
 
 // 'http://localhost:5001';
 

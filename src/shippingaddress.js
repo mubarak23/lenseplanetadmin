@@ -5,7 +5,6 @@ import {
   DateField,
   Filter,
   List,
-  NumberField,
   TextField,
   TextInput,
 } from 'react-admin';
@@ -21,18 +20,15 @@ const SearchFilter = (props) => (
   </Filter>
 );
 
-export const OrdersList = (props) => (
+export const ShippingAddressList = (props) => (
   <List {...props} filters={<SearchFilter />}>
     <Datagrid rowClick='edit'>
-      <BooleanField source='patient' label='Patient' />
-      <TextField source='patientStockName' label='Patient Stock Name ' />
-      <TextField source='orderNo' label='order Number' />
-      <NumberField source='quantity' label='Quantity' />
-      <NumberField source='totalAmount' label='Total Amount' />
-      <NumberField source='platformChargeAmount' label='Platform Charges' />
-      <NumberField source='subtotalAmount' label='Sub Total Amount' />
-      <BooleanField source='specialRequest' label='Special Request' />
-      <DateField source='createdAtDate' />
+      <TextField source='officeAddress' label='Office Address' />
+      <TextField source='city' label='City' />
+      <TextField source='state' label='State' />
+      <TextField source='country' label='Country' />
+      <BooleanField source='primary' label='Primary Addresss' />
+      <DateField source='time' />
     </Datagrid>
   </List>
 );

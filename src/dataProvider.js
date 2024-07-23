@@ -8,7 +8,7 @@ import { handleAxiosRequestError } from './utils';
 
 const httpClient = fetchUtils.fetchJson;
 
-let apiUrl = 'https://lens-plannet-17cc7458993a.herokuapp.com';
+ let apiUrl = 'https://lens-plannet-17cc7458993a.herokuapp.com';
 
 // 'https://staging.api.lensesplanet.com';
 

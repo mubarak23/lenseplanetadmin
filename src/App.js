@@ -24,6 +24,7 @@ import { LensSphereLists } from './lenssphere';
 import { LensThicknessLists } from './lensthickness';
 import { LensTypeLists } from './lenstype';
 import { OrdersList } from './orders';
+import { ShippingAddressList } from './shippingaddress';
 const UserSearchFilter = (props) => (
   <Filter {...props}>
     <TextInput label='Search with User Id' source='userId' alwaysOn />
@@ -59,6 +60,7 @@ const App = () => (
     <Resource name='lens Type' list={LensTypeLists} />
     <Resource name='lens Sphere' list={LensSphereLists} />
     <Resource name='lens cylinder' list={LensCylinderLists} />
+    <Resource name='shipping-address' list={ShippingAddressList} />
     <Resource name='lens Thickness' list={LensThicknessLists} />
     <Resource name='lens coating' list={LensCoatingLists} />
   </Admin>
