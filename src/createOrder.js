@@ -24,23 +24,23 @@ export const CreateOrder = (props) => {
             // const patient = new (document.getElementsByName(
             //   'patient'
             // )[0].value)();
-            const orderfor = 
-              document.getElementsByName('orderfor')[0].value
-            ;
-
+            const orderfor = document.getElementsByName('orderfor')[0].value;
             const patientStockname =
               document.getElementsByName('patientStockName')[0].value;
             const quantity = new Number(
               document.getElementsByName('quantity')[0].value
             );
 
-            // lenstypename
-            const lenstypename =
-              document.getElementsByName('lenstypename')[0].value;
+            // // lenstypename
+            // const lenstypename =
+            //   document.getElementsByName('lenstypename')[0].value;
 
             // lensthicknessname
             const lensthicknessname =
               document.getElementsByName('lensthicknessname')[0].value;
+
+            const lenstypename =
+              document.getElementsByName('lenstypename')[0].value;
 
             // lensspherevalue
             const lensspherevalue = new Number(
@@ -66,9 +66,6 @@ export const CreateOrder = (props) => {
             const lenscoatingname =
               document.getElementsByName('lenscoatingname')[0].value;
 
-            const shippingAddressId =
-              document.getElementsByName('shippingAddressId')[0].value;
-
             CreateOrderByAdmin(
               orderfor,
               lensspherevalue,
@@ -80,7 +77,7 @@ export const CreateOrder = (props) => {
               lensaxiesvalue,
               lensadditionvalue,
               quantity,
-              shippingAddressId,
+
               window.location.href
             );
           }}
@@ -111,16 +108,14 @@ export const CreateOrder = (props) => {
         /> */}
 
         <NumberInput source='quantity' label='Quantity ' />
-        <TextInput source='lenstypename' label='Len Thickness Name' />
-        <TextInput source='lensthicknessname' label='Len Type Name' />
+        <TextInput source='lenstypename' label='Len Tye Name' />
+        <TextInput source='lensthicknessname' label='Len Thickness Name' />
         <TextInput source='lenscoatingname' label='Len Coasting Name' />
 
         <NumberInput source='lensspherevalue' label='Lens Sphere Value ' />
         <NumberInput source='lenscylindervalue' label='Lens Cylinder Value ' />
         <NumberInput source='lensaxiesvalue' label='Lens Axies Value ' />
         <NumberInput source='lensadditionvalue' label='Lens Addition Value ' />
-
-        <NumberInput source='shippingAddressId' label='Shipping Address Id' />
       </SimpleForm>
     </Create>
   );

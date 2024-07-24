@@ -15,7 +15,7 @@ export const CreateOrderByAdmin = async (
   lensaxiesvalue,
   lensadditionvalue,
   quantity,
-  shippingAddressId,
+
   currentPageUrl
 ) => {
   let axiosConfig = {
@@ -28,21 +28,23 @@ export const CreateOrderByAdmin = async (
   axiosConfig.headers['x-access-token'] = localStorage.getItem('token');
 
   const url = `${getApiBaseUrl()}/super/orders`;
+
+
   const putPayload = {
-    orderfor,
+    orderfor: orderfor,
     lensspherevalue,
-    lenscoatingname,
+    lenscoatingname: lenscoatingname,
     specialrequest: false,
     single: true,
     patient: true,
-    patientStockname,
-    lenstypename,
-    lensthicknessname,
+    patientStockname: patientStockname,
+    lenstypename: lenstypename,
+    lensthicknessname: lensthicknessname,
+
     lenscylindervalue,
     lensaxiesvalue,
     lensadditionvalue,
     quantity,
-    shippingAddressId,
   };
   console.log('just before hitting our API', putPayload);
   try {
@@ -56,7 +58,7 @@ export const CreateOrderByAdmin = async (
     window.location.href = currentPageUrl;
     console.log(window.location.href);
     toast.success('Order Created Successfully');
-    // window.location.reload(true);
+    window.location.reload(true);
   } catch (e) {
     const errorMessage = handleAxiosRequestError(e);
     toast.error(errorMessage);
